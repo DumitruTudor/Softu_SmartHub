@@ -8,7 +8,7 @@
     --primary-color: #1E3A8A;  /* Dark Blue (contrasting opposite of blue for text) */
     --secondary-color: #3B82F6; /* Lighter Blue (soft contrast for secondary elements) */
     --background-color: #0F172A; /* Very dark blue background */
-    --text-color: #434343; /* Light gray text */
+    --text-color: #6c6c6c; /* Light gray text */
 }
 
 
@@ -267,6 +267,101 @@ section {
 
 [data-theme="dark"] #dark-mode-toggle i {
     color: #333; /* Change icon color in dark mode */
+}
+#testimonials {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+
+.testimonial-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.testimonial-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.testimonial-image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-name {
+    font-size: 1.2rem;
+    color: #007BFF;
+    margin-bottom: 5px;
+}
+
+.testimonial-position {
+    font-size: 1rem;
+    color: #666;
+}
+
+.testimonial-nav {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+.testimonial-nav:hover {
+    color: #0056b3;
+}
+
+@media screen and (max-width: 650px) {
+    .testimonial-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+
+    .testimonial-name {
+        font-size: 1rem;
+    }
+
+    .testimonial-position {
+        font-size: 0.9rem;
+    }
 }
 
 
