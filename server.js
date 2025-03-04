@@ -1,6 +1,12 @@
-const express = require("express");
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const app = express();
-const path = require("path");
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, "public")));
@@ -13,11 +19,11 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "views/index.html"));
 });
 
-// Handle contact form submission
-app.post("/contact", (req, res) => {
-    console.log(req.body);
-    res.send("Message received!");
-});
+// Check if running locally, then start the server
+if (process.env.NODE_ENV !== "production") {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+}
 
 // Export the app for Vercel
-module.exports = app;
+export default app;
