@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #F4F4F4;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -27,7 +32,7 @@ body {
 
 /* Navigation Bar */
 nav {
-    background: #007BFF;
+    background: var(--primary-color);
     padding: 15px;
     text-align: center;
 }
@@ -50,7 +55,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #F4F4F4;
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
@@ -84,7 +89,7 @@ nav ul li a:hover {
 
 .hero button {
     background: white;
-    color: #007BFF;
+    color: var(--primary-color);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -105,7 +110,7 @@ nav ul li a:hover {
 #features {
     padding: 60px 20px;
     text-align: center;
-    background: #F4F4F4;
+    background: var(--secondary-color);
     
 }
 
@@ -134,7 +139,7 @@ nav ul li a:hover {
 }
 
 .feature h3 {
-    color: #007BFF;
+    color: var(--primary-color);
 }
 
 /* Pricing Section */
@@ -151,7 +156,7 @@ nav ul li a:hover {
 }
 
 .plan {
-    background: #007BFF;
+    background: var(--primary-color);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -170,7 +175,7 @@ nav ul li a:hover {
 #contact {
     padding: 60px 20px;
     text-align: center;
-    background: #F4F4F4;
+    background: var(--secondary-color);
 }
 
 form {
@@ -183,15 +188,15 @@ form {
 form input, form textarea {
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #007BFF;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
-    border-color: #007BFF;
+    border-color: var(--primary-color);
     box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
     outline: none;
 }
 
 form button {
-    background: #007BFF;
+    background: var(--primary-color);
     color: white;
     padding: 10px;
     border: none;
@@ -211,3 +216,4 @@ section {
     transform: translateY(40px);
     transition: opacity 1s ease-out, transform 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
