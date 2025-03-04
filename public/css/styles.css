@@ -5,10 +5,10 @@
     --text-color: #333;
 }
 [data-theme="dark"] {
-    --primary-color: #1E3A8A;  /* Dark Blue (contrasting opposite of blue for text) */
-    --secondary-color: #3B82F6; /* Lighter Blue (soft contrast for secondary elements) */
-    --background-color: #0F172A; /* Very dark blue background */
-    --text-color: #6c6c6c; /* Light gray text */
+    --primary-color: #1E3A8A;
+    --secondary-color: #3B82F6; 
+    --background-color: #0F172A; 
+    --text-color: #6c6c6c; 
 }
 
 
@@ -96,7 +96,7 @@ nav ul li a:hover {
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.5); /* Adds a slight overlay for better text readability */
+    background: rgba(0, 0, 0, 0.5);
     padding: 40px;
     border-radius: 10px;
 }
@@ -163,7 +163,7 @@ nav ul li a:hover {
 }
 
 #features h2 {
-    margin-bottom: 30px; /* Adjust the value as needed */
+    margin-bottom: 30px; 
 }
 
 .feature h3 {
@@ -262,11 +262,11 @@ section {
 }
 
 #dark-mode-toggle i {
-    color: #fff; /* Light text color by default */
+    color: #fff; 
 }
 
 [data-theme="dark"] #dark-mode-toggle i {
-    color: #333; /* Change icon color in dark mode */
+    color: #333; 
 }
 #testimonials {
     padding: 60px 20px;

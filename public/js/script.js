@@ -1,16 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("nav ul li a").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
+document.addEventListener("DOMContentLoaded", () => 
+{
+    document.querySelectorAll("nav ul li a").forEach(anchor => 
+    {
+        // When a navigation link is clicked, prevent the default link behavior
+        anchor.addEventListener("click", function (e) 
+        {
             e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
+            // Use the 'href' attribute of the anchor tag to find the corresponding section
+            // Then scroll to that section smoothly
+            document.querySelector(this.getAttribute("href")).scrollIntoView(
+            {
                 behavior: "smooth"
             });
         });
     });
-
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
+    
+    // Add a 'submit' event listener to the contact form with the ID 'contact-form'
+    document.getElementById("contact-form").addEventListener("submit", function (e) 
+    {
         e.preventDefault();
-        alert("Message sent!");
-        this.reset();
+        alert("Message sent!"); // Display alert to inform user that the message was sent
+        this.reset(); // Reset fields after submission
     });
 });

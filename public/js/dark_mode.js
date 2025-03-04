@@ -1,19 +1,24 @@
 // Function to toggle dark mode
-const toggleDarkMode = () => {
+const toggleDarkMode = () => 
+{
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark'; // Toggle between 'dark' and 'light'
 
     // Apply the new theme
     document.documentElement.setAttribute('data-theme', newTheme);
 
-    // Toggle icon visibility
+    
     const sunIcon = document.getElementById('sun-icon');
     const moonIcon = document.getElementById('moon-icon');
 
-    if (newTheme === 'dark') {
+    // Toggle icon visibility
+    if (newTheme === 'dark') 
+    {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'block';
-    } else {
+    } 
+    else 
+    {
         sunIcon.style.display = 'block';
         moonIcon.style.display = 'none';
     }
@@ -24,22 +29,27 @@ const toggleDarkMode = () => {
 
 // Check if there is a saved theme preference in localStorage
 const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
+if (savedTheme) 
+{
     document.documentElement.setAttribute('data-theme', savedTheme);
 
     // Set the correct icon based on the saved theme
     const sunIcon = document.getElementById('sun-icon');
     const moonIcon = document.getElementById('moon-icon');
     
-    if (savedTheme === 'dark') {
+    if (savedTheme === 'dark') 
+    {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'block';
-    } else {
+    } 
+    else 
+    {
         sunIcon.style.display = 'block';
         moonIcon.style.display =    'none';
     }
-} else {
-    // Default theme is light
+} 
+else 
+{
     document.documentElement.setAttribute('data-theme', 'light');
 }
 
