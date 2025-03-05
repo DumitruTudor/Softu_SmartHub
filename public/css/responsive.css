@@ -61,6 +61,7 @@
     form {
         max-width: 90%;
     }
+
 }
 
 /* For devices smaller than 480px (phones) */
@@ -135,6 +136,7 @@
     .dark-mode-desktop {
         display: none;
     }
+    
 }
 
 @media screen and (max-width: 650px) {
@@ -144,7 +146,7 @@
     }
 
     .testimonial-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .testimonial-name {
@@ -153,6 +155,12 @@
 
     .testimonial-position {
         font-size: 0.9rem;
+    }
+    #next{
+        right: 3.5px;
+    }
+    #left{
+        left: 3.5px;
     }
 }
 
