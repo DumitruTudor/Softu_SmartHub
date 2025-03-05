@@ -22,4 +22,22 @@ document.addEventListener("DOMContentLoaded", () =>
         alert("Message sent!"); // Display alert to inform user that the message was sent
         this.reset(); // Reset fields after submission
     });
+    
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    // Toggle Menu
+    menuToggle.addEventListener("click", function () 
+    {
+        navMenu.classList.toggle("show");
+    });
+    
+    const learnMoreBtn = document.getElementById("learn-more-btn");
+    const featuresSection = document.getElementById("features");
+
+    if (learnMoreBtn && featuresSection) {
+        learnMoreBtn.addEventListener("click", function () {
+            featuresSection.scrollIntoView({ behavior: "smooth" });
+        });
+    }
 });

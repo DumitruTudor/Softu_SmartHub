@@ -5,14 +5,11 @@
     --text-color: #333;
 }
 [data-theme="dark"] {
-    --primary-color: #1E3A8A;
-    --secondary-color: #3B82F6; 
-    --background-color: #0F172A; 
-    --text-color: #6c6c6c; 
+    --primary-color: #1E3A8A;  /* Darker blue for contrast */
+    --secondary-color: #3B82F6; /* Bright blue for accents */
+    --background-color: #0F172A; /* Deep dark blue for background */
+    --text-color: #000;
 }
-
-
-
 
 html {
     scroll-behavior: smooth;
@@ -97,7 +94,7 @@ nav ul li a:hover {
 
 .hero-overlay {
     background: rgba(0, 0, 0, 0.5);
-    padding: 40px;
+    padding: 25px;    
     border-radius: 10px;
 }
 
@@ -185,7 +182,14 @@ nav ul li a:hover {
 
 #pricing h2 {
     margin-bottom: 30px;
+    color: var(--text-color); /* Default color for light mode */
 }
+
+/* Dark Mode Color */
+[data-theme="dark"] #pricing h2 {
+    color: var(--secondary-color); /* Color for dark mode */
+}
+
 
 .plan {
     background: var(--primary-color);
@@ -249,16 +253,12 @@ section {
     transition: opacity 1s ease-out, transform 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-#dark-mode-toggle {
-    position: fixed;
-    top: 0rem;
-    right: 500px;
-    background-color: transparent;
+.dark-mode-desktop {
+    background: none;
     border: none;
-    padding: 5px;
     cursor: pointer;
-    font-size: 24px;
-    z-index: 1000;
+    font-size: 20px;
+    color: white;
 }
 
 #dark-mode-toggle i {
@@ -306,19 +306,19 @@ section {
 
 .testimonial-text {
     font-size: 1.1rem;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
 .testimonial-name {
     font-size: 1.2rem;
-    color: #007BFF;
+    color: var(--text-color);
     margin-bottom: 5px;
 }
 
 .testimonial-position {
     font-size: 1rem;
-    color: #666;
+    color: #000;
 }
 
 .testimonial-nav {
@@ -343,115 +343,4 @@ section {
 
 .testimonial-nav:hover {
     color: #0056b3;
-}
-
-@media screen and (max-width: 650px) {
-    .testimonial-image {
-        width: 60px;
-        height: 60px;
-    }
-
-    .testimonial-text {
-        font-size: 1rem;
-    }
-
-    .testimonial-name {
-        font-size: 1rem;
-    }
-
-    .testimonial-position {
-        font-size: 0.9rem;
-    }
-}
-
-
-/* Media Queries for Responsiveness */
-
-/* For devices larger than 1024px (PC and larger tablets) */
-@media (min-width: 1024px) {
-    .hero {
-        height: 500px;
-    }
-
-    .feature {
-        width: 300px;
-    }
-
-    .plan {
-        width: 300px;
-    }
-
-    form {
-        max-width: 500px;
-    }
-}
-
-/* For devices between 768px and 1024px (tablets) */
-@media (max-width: 1024px) and (min-width: 768px) {
-    .hero {
-        height: 400px;
-    }
-
-    .feature {
-        width: 250px;
-    }
-
-    .plan {
-        width: 250px;
-    }
-
-    form {
-        max-width: 400px;
-    }
-}
-
-/* For devices between 480px and 768px (small tablets and large phones) */
-@media (max-width: 768px) and (min-width: 480px) {
-    .hero {
-        height: 300px;
-    }
-
-    .feature {
-        width: 200px;
-    }
-
-    .plan {
-        width: 200px;
-    }
-
-    form {
-        max-width: 90%;
-    }
-}
-
-/* For devices smaller than 480px (phones) */
-@media (max-width: 480px) {
-    .hero {
-        height: 250px;
-    }
-
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .feature {
-        width: 100%;
-    }
-
-    .plan {
-        width: 100%;
-    }
-
-    form {
-        max-width: 100%;
-    }
 }

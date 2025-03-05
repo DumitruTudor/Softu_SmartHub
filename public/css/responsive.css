@@ -1,69 +1,173 @@
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        background: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        padding: 10px 0;
-    }
-    
-    nav ul.show {
-        display: flex;
-    }
-    
-    .menu-toggle {
-        display: block;
-    }
-    
+
+
+
+/* Media Queries for Responsiveness */
+
+/* For devices larger than 1024px (PC and larger tablets) */
+@media (min-width: 1024px) {
     .hero {
-        height: 350px;
+        height: 500px;
     }
-    
-    .hero h1 {
-        font-size: 2rem;
+
+    .feature {
+        width: 300px;
     }
-    
-    .hero p {
-        font-size: 1rem;
+
+    .plan {
+        width: 300px;
     }
-    
-    .feature-container, .pricing-container {
-        flex-direction: column;
-        align-items: center;
+
+    form {
+        max-width: 500px;
     }
-    
-    .feature, .plan {
-        width: 90%;
+}
+
+/* For devices between 768px and 1024px (tablets) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .hero {
+        height: 400px;
     }
-    
+
+    .feature {
+        width: 250px;
+    }
+
+    .plan {
+        width: 250px;
+    }
+
+    form {
+        max-width: 400px;
+    }
+}
+
+/* For devices between 480px and 768px (small tablets and large phones) */
+@media (max-width: 768px) and (min-width: 480px) {
+    nav {
+        padding: 5px;
+    }
+    .hero {
+        height: 300px;
+    }
+
+    .feature {
+        width: 200px;
+    }
+
+    .plan {
+        width: 200px;
+    }
+
     form {
         max-width: 90%;
     }
 }
 
+/* For devices smaller than 480px (phones) */
 @media (max-width: 480px) {
-    .hero {
-        height: 300px;
+    nav {
+        padding: 5px;
     }
-    
+    .hero {
+        height: 250px;
+    }
     .hero h1 {
         font-size: 1.5rem;
     }
-    
+
     .hero p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    .plan {
+        width: 100%;
+    }
+
+    form {
+        max-width: 100%;
+    }
+}
+
+/* Hide the menu by default for small screens */
+@media (max-width: 768px) {
+    nav {
+        padding: 5px;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+    }
+    .dark-mode-mobile {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .dark-mode-desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .testimonial-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+
+    .testimonial-name {
+        font-size: 1rem;
+    }
+
+    .testimonial-position {
         font-size: 0.9rem;
     }
-    
-    .hero button {
-        font-size: 0.8rem;
-        padding: 8px 14px;
+}
+
+/* Hide the hamburger menu on larger screens */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
     }
-    
-    section {
-        padding: 30px 10px;
+    .dark-mode-desktop {
+        display: grid;
+        position: absolute;
+        top: 9px;
+    }
+
+    .dark-mode-mobile {
+        display: none;
     }
 }

@@ -11,16 +11,27 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <button id="menu-toggle" class="hamburger-menu" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="nav-menu" class="hidden">
                 <li><a href="#home" id="nav-home">Home</a></li>
                 <li><a href="#features" id="nav-features">Features</a></li>
                 <li><a href="#pricing" id="nav-pricing">Pricing</a></li>
                 <li><a href="#contact" id="nav-contact">Contact</a></li>
+                <li class="dark-mode-mobile">
+                    <button id="dark-mode-toggle">
+                        <i class="fas fa-sun" id="sun-icon"></i>
+                        <i class="fas fa-moon" id="moon-icon" style="display: none"></i>
+                    </button>
+                </li>
+                <li>
+                    <button id="dark-mode-toggle-large" class="dark-mode-desktop">
+                        <i class="fas fa-sun" id="sun-icon-desktop"></i>
+                        <i class="fas fa-moon" id="moon-icon-desktop" style="display: none"></i>
+                    </button>
+                </li>
             </ul>
-            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
-                <i class="fas fa-sun" id="sun-icon"></i>
-                <i class="fas fa-moon" id="moon-icon" style="display: none"></i>
-            </button>
         </nav>
     </header>
 
@@ -30,7 +41,7 @@
             <h1>Softu SmartHub</h1>
             <h2>Control Your Home, Anytime, Anywhere.</h2>
             <p>Experience the future of home automation.</p>
-            <button>Learn More</button>
+            <button id="learn-more-btn">Learn More</button>
         </div>
     </section>
     
@@ -84,25 +95,26 @@
         </form>
     </section>
     <section id="testimonials">
+        <h2>What our customers say</h2>
         <div class="testimonial-wrapper">
             <div class="testimonial-container">
                 <div class="testimonial-slide">
                     <img src="/images/user1.png" alt="User 1" class="testimonial-image">
-                    <p class="testimonial-text">"This product is amazing! Highly recommended!"</p>
+                    <p class="testimonial-text">"Softu SmartHub has completely transformed my home! I can control everything from my phone. Highly recommended!"</p>
                     <h3 class="testimonial-name">John Doe</h3>
-                    <h6 class="testimonial-position">CEO at XYZ Corp</h6>
+                    <h6 class="testimonial-position">Verified Customer</h6>
                 </div>
                 <div class="testimonial-slide">
                     <img src="/images/user2.png" alt="User 2" class="testimonial-image">
-                    <p class="testimonial-text">"An excellent service, will use again!"</p>
+                    <p class="testimonial-text">"I love how easy it is to manage my appliances remotely. Great product and excellent customer service!"</p>
                     <h3 class="testimonial-name">Jane Smith</h3>
-                    <h6 class="testimonial-position">Marketing Manager at ABC Ltd.</h6>
+                    <h6 class="testimonial-position">Verified Customer</h6>
                 </div>
                 <div class="testimonial-slide">
                     <img src="/images/user3.png" alt="User 3" class="testimonial-image">
-                    <p class="testimonial-text">"A game-changer for our business. Love it!"</p>
+                    <p class="testimonial-text">"Softu SmartHub has made my life so much easier. The energy-saving features are a game-changer!"</p>
                     <h3 class="testimonial-name">Mike Johnson</h3>
-                    <h6 class="testimonial-position">Founder of Techies</h6>
+                    <h6 class="testimonial-position">Verified Customer</h6>
                 </div>
             </div>
             <button id="prev" class="testimonial-nav">&#10094;</button>
