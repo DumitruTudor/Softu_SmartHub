@@ -164,7 +164,6 @@
     }
 }
 
-/* Hide the hamburger menu on larger screens */
 @media (min-width: 769px) {
     .hamburger-menu {
         display: none;

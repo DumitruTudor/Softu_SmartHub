@@ -3,7 +3,7 @@ const toggleDarkMode = () =>
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark'; // Toggle between 'dark' and 'light'
 
-    // Apply the new theme
+    // Applying the theme
     document.documentElement.setAttribute('data-theme', newTheme);
 
     
@@ -57,14 +57,11 @@ const updateIcons = (theme) =>
 
 document.addEventListener('DOMContentLoaded', () => 
 {
-    // Check if there is a saved theme preference in localStorage
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     
-    // Set icons based on saved theme
     updateIcons(savedTheme);
 
-    // Add event listeners
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const darkModeToggleDesktop = document.getElementById('dark-mode-toggle-large');
 
