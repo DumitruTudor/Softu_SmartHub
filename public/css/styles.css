@@ -262,7 +262,8 @@ section {
 }
 
 #dark-mode-toggle i {
-    color: #fff; 
+    color: #fff;
+    font-size: 24px; 
 }
 
 [data-theme="dark"] #dark-mode-toggle i {
